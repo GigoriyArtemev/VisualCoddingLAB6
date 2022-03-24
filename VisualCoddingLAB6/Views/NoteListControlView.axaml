@@ -1,0 +1,29 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="VisualCoddingLAB6.Views.NoteListControlView">
+
+	<ScrollViewer VerticalScrollBarVisibility="Auto">
+		<ItemsControl Items="{Binding NoteListByDate}">
+			<ItemsControl.ItemTemplate>
+				<DataTemplate>
+					<Grid RowDefinitions="*" ColumnDefinitions="*, *, *">
+						<Border CornerRadius="5" BorderBrush="White" BorderThickness="2" Background="White"
+						 VerticalAlignment="Center" UseLayoutRounding="True">
+							<TextBlock Background="Transparent" Width="330" Height="40" TextAlignment="Center" Margin="0,25,0,0" Text="{Binding GetNameOfNote}">
+							</TextBlock>
+						</Border>
+						<Button Height="50">
+							<Image Source="/Assets/in_zoom.ico"/>
+						</Button>
+						<Button Height="50">
+							<Image Source="/Assets/trash.ico"/>
+						</Button>
+					</Grid>
+				</DataTemplate>
+			</ItemsControl.ItemTemplate>
+		</ItemsControl>
+	</ScrollViewer>
+</UserControl>

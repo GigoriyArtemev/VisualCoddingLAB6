@@ -1,0 +1,35 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:VisualCoddingLAB6.ViewModels"
+		xmlns:view="clr-namespace:VisualCoddingLAB6.Views"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="450" d:DesignHeight="450"
+        x:Class="VisualCoddingLAB6.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Notes"
+        MinHeight="450"
+        MinWidth="450"
+        MaxHeight="450"
+        MaxWidth="450">
+
+
+
+	<Window.Styles>
+		<StyleInclude Source="/Styles/Styles.axaml"/>
+	</Window.Styles>
+
+	<Grid Classes="DateGrid" ShowGridLines="False" ColumnDefinitions="*, *, *, *" RowDefinitions="*, *, *, *, *, *, *, *, *" VerticalAlignment="Top" Height="450">
+		<Border CornerRadius="5" BorderBrush="Gray" BorderThickness="2" VerticalAlignment="Top" Background="White" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4">
+			<DatePicker Name="DatePicker" Width="447" Height="53"/>
+		</Border>
+		<view:NoteListControlView Name="NoteList" Grid.Row="1" Grid.RowSpan="7" Grid.Column="0" Grid.ColumnSpan="4">
+
+		</view:NoteListControlView>
+
+		<Button Name="Add" Classes="AddButton" Grid.Row="8" Grid.ColumnSpan="4" Background="LightGray" Click="AddNoteClickEventHandler">
+			<Image Source="/Assets/add.ico"/>
+		</Button>
+	</Grid>
+
+</Window>

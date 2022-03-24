@@ -1,0 +1,27 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="450" d:DesignHeight="450"
+        x:Class="VisualCoddingLAB6.Views.NoteWindow"
+        Title="Planner"
+		MinHeight="450"
+        MinWidth="450"
+        MaxHeight="450"
+        MaxWidth="450">
+
+	<Grid Name="NoteChanger" RowDefinitions="*, *, *, *, *, *, *, *" ColumnDefinitions="*">
+		<TextBox Name="NoteName" Grid.Row="0" Grid.RowSpan="1" Watermark="Введите название заметки"/>
+		<TextBox Name="NoteText" Grid.Row="1" Grid.RowSpan="5" Watermark="Введите текст заметки"/>
+		<Border CornerRadius="5" BorderBrush="Gray" BorderThickness="2" Background="White" Grid.Row="6" Grid.RowSpan="1">
+			<Button Name="OK" VerticalAlignment="Top" Width="450" Height="55" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+				OK
+			</Button>
+		</Border>
+		<Border CornerRadius="5" BorderBrush="Gray" BorderThickness="2" Background="White" Grid.Row="7" Grid.RowSpan="1">
+			<Button Name="Cancel" VerticalAlignment="Top" Width="450" Height="55" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+				Cancel
+			</Button>
+		</Border>
+	</Grid>
+</Window>
